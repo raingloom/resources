@@ -1,0 +1,17 @@
+<meta>
+	<info name="RDebug" description="debugger and standard library reimplementation" type="script" author="Rain_Gloom"/>
+	
+	<!-- Shared functions -->
+	<script src="std.lua" type="shared"/>
+	<!--standard print with added vararg returning-->
+	<export function="print" type="shared"/>
+	
+	<!-- Server-side functions -->
+	<script src="s_std.lua" type="server"/>
+	<!-- standard print with added vararg returning -->
+	<export function="s_print" type="server"/>
+	
+	<!-- assert(pcall(loadstring(exports.rdebug:getStdSource()))) -->
+	<script src="s_loader.lua" type="server"/>
+	<export function="s_getStdSource" type="server"/>
+</meta>

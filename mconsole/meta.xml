@@ -1,0 +1,12 @@
+<meta>
+	<info name="MConsole" description="Character matrix console screen" author="Rain_Gloom"/>
+	<oop>true</oop>
+	<script src="stringops.lua" type="client"/>
+	<script src="class.lua" type="client"/>
+	<script src="test.lua" type="client"/>
+	
+	<export function="MatrixConsole_render" type="client"/>
+	<export function="MatrixConsole_setCursor" type="client"/>
+	<export function="MatrixConsole_concat" type="client"/>
+	<export function="MatrixConsole_new" type="client"/>
+</meta>
