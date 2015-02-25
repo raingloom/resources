@@ -1,3 +1,4 @@
 <meta>
-	<script src="c.lua" type="client"/>
+	<info process="1"/>
+	<script src="c.lua" type="client" process="1"/>
 </meta>

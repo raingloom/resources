@@ -1,8 +1,15 @@
 <meta>
 	<info name="Lua preprocessor and auto-compiler" description="Pre-processes and compiles a list of resources" author="Rain_Gloom" type="script"/>
+	<oop>true</oop>
+	
+	<aclrequest>
+		<right name="general.ModifyOtherObjects" access="true"/>
+	</aclrequest>
+	
 	<script src="debug.lua" type="server"/>
 	<script src="file.lua" type="server"/>
 	<script src="preprocessor.lua" type="server"/>
+	<script src="daemon.lua" type="server"/>
 	
 	<!--
 		string preProcessFile ( string|file file, [bool mode])
