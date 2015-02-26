@@ -7,8 +7,11 @@ local Sensitivity=1
 local cx0,cy0=0,0
 local cx1,cy1=0,0
 showCursor(true)
+guiSetInputEnabled(false)
+guiSetInputMode"allow_binds"
 ---[[
 addEventHandler("onClientPreRender",root,function(deltaTime)
+	deltaTime=deltaTime or 50
 	local v6=Vector3(getPedBonePosition(localPlayer,6))
 	local v7=Vector3(getPedBonePosition(localPlayer,7))
 	local v8=Vector3(getPedBonePosition(localPlayer,8))
@@ -18,11 +21,14 @@ addEventHandler("onClientPreRender",root,function(deltaTime)
 	vf=vu:cross(vr)
 	cx0,cy0=cx1,cy1
 	cx1,cy1=getCursorPosition()
-	setCursorPosition(origX,origY)
 	dxDrawText(string.format("%f:%f <-> %f:%f",cx0,cy0,cx1,cy1),0,0)
 	Rot=Rot-(cx1-cx0)*Sensitivity*deltaTime
 	vf=rotateVectorAround(vf,"z",Rot)
 	setCameraMatrix(v67,v67+vf)
+end)--]]
+--[[
+addEventHandler("onClientRender",root,function()
+	setCursorPosition(origX,origY)
 end)--]]
 
 --[[
